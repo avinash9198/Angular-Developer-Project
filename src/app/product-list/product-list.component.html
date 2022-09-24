@@ -1,0 +1,31 @@
+<h2>Products</h2>
+<div *ngFor ="let product of products">
+  <!-- <a href="https://swayam.gov.in/"><h2>{{product.name}}</h2></a> -->
+  <!-- <h2>{{product.price}}</h2>
+  <h2>{{product.description}}</h2> -->
+  <a [title]="product.name + 'this is the description about phone'">
+  {{ product.name }}
+</a>
+<p class="product.id">
+ id- {{ product.id}}
+</p>
+<p class="product.description">
+Details - {{ product.description }}
+</p>
+<p class="product.price">
+ price- {{ product.price}}
+</p><p class="product.colors"> colors- {{ product.colors}}
+</p>
+
+<!-- <a href="https://web.whatsapp.com/"><button class="share_button" (click)='share()'>share</button></a> -->
+
+<button type="button" (click)="share()">
+Share
+</button>
+
+<app-product-alerts
+[product]="product">
+</app-product-alerts>
+
+</div>
+
